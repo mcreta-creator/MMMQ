@@ -1,0 +1,199 @@
+\documentclass[]{book}
+
+%These tell TeX which packages to use.
+\usepackage{array,epsfig}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsxtra}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+\usepackage{color}
+\usepackage{mathtools}
+\usepackage{geometry}
+
+
+%Here I define some theorem styles and shortcut commands for symbols I use often
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\newtheorem*{rmk}{Remark}
+\newtheorem{lem}{Lemma}
+\newtheorem*{joke}{Joke}
+\newtheorem{ex}{Example}
+\newtheorem*{soln}{Solution}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\surj}{\twoheadrightarrow}
+\newcommand{\graph}{\mathrm{graph}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\Z}{\bb{Z}}
+\newcommand{\Q}{\bb{Q}}
+\newcommand{\R}{\bb{R}}
+\newcommand{\C}{\bb{C}}
+\newcommand{\N}{\bb{N}}
+\newcommand{\M}{\mathbf{M}}
+\newcommand{\m}{\mathbf{m}}
+\newcommand{\MM}{\mathscr{M}}
+\newcommand{\HH}{\mathscr{H}}
+\newcommand{\Om}{\Omega}
+\newcommand{\Ho}{\in\HH(\Om)}
+\newcommand{\bd}{\partial}
+\newcommand{\del}{\partial}
+\newcommand{\bardel}{\overline\partial}
+\newcommand{\textdf}[1]{\textbf{\textsf{#1}}\index{#1}}
+\newcommand{\img}{\mathrm{img}}
+\newcommand{\ip}[2]{\left\langle{#1},{#2}\right\rangle}
+\newcommand{\inter}[1]{\mathrm{int}{#1}}
+\newcommand{\exter}[1]{\mathrm{ext}{#1}}
+\newcommand{\cl}[1]{\mathrm{cl}{#1}}
+\newcommand{\ds}{\displaystyle}
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\cnt}{\mathrm{ct}}
+\newcommand{\osc}{\mathrm{osc}}
+\newcommand{\LL}{\mathbf{L}}
+\newcommand{\UU}{\mathbf{U}}
+\newcommand{\support}{\mathrm{support}}
+\newcommand{\AND}{\;\wedge\;}
+\newcommand{\OR}{\;\vee\;}
+\newcommand{\Oset}{\varnothing}
+\newcommand{\st}{\ni}
+\newcommand{\wh}{\widehat}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\Fp}{\mathcal{F}_+}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\adag}[1]{a^{*}_{#1}}
+\newcommand{\an}[1]{a_{#1}}
+\newcommand{\LN}{\mathcal{L}_N}
+\newcommand{\HN}{\mathcal{H}_N}
+
+%Pagination stuff.
+\setlength{\topmargin}{-.3 in}
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textheight}{9.in}
+\setlength{\textwidth}{6.5in}
+\pagestyle{empty}
+
+
+
+\begin{document}
+
+
+\begin{center}
+{\Large Esercizi MMMQ}\\
+%textbf{NAME}\\ %You should put your name here
+%Due: DATE %You should write the date here.
+\end{center}
+
+\vspace{0.2 cm}
+
+
+
+
+\begin{enumerate}
+\item Sia $\hat{x}: D(\hat{x}) \to L^2(\mathbb{R})$ definito da $\hat{x}(\psi)(x) = x \psi (x)$ per ogni $\psi \in D(\hat{x}) = \{\psi \in L^2(\mathbb{R}): \int_{\mathbb{R}}x^2|\psi(x)|^2dx < \infty\}$. Si dimostri che $D(\hat{x})$ è denso in $L^2(\mathbb{R})$.
+
+\item Dimostrare che $C^\infty(\mathbb{R})$ è denso in $L^2(\mathbb{R})$.
+
+\item Sia $f: \mathbb{R} \to \mathbb{C}$, si condiseri $(A_f \psi)(x) = f(x)\psi(x)$ per ogni $\psi in D(A) = \{\psi \in L^2(\mathbb{R}): f \psi \in L^2(\mathbb{R})\}$. Si dimostri che $D(A)$ è denso in $L^2(\mathbb{R})$.
+
+\item Siano $D(A) = C^{\infty}_0(\mathbb{R})$, $H = L^2(\mathbb{R})$ e $Af = \sum_{n \in \mathbb{N}}f(n)e_n$, dove $\{e_n: n \in \mathbb{N}\}$ è un sistema ortonormale completo. Dimostrare che $D(A^\star) = \{0\}$.
+
+\item Siano $H = L^2(\mathbb{R})$, $D(A) = \{f \in L^2(\mathbb{R}): \int_\mathbb{R} |xf(x)|dx < \infty\}$ e $(Af)(x) = xf(x)$. Dimostrare che $\sigma(A) = \mathbb{R}, \sigma_p(A) = \emptyset, \rho(A) = \mathbb{C}\setminus \mathbb{R}$.
+
+\item Sia $X = C([0, 1])$ con $||f|| = \sup_{x \in [0, 1]}|f(x)|$. Consideriamo gli operatori $A_i : D_i \subset X \to X$ definiti da $(A_i f)(x) = f'(x)$ per $i = 1, 2, 3, 4$ dove: $D_1 = C^1([0, 1]), D_2 = \{f \in X: f(0) = 0\}, D_3 = \{f \in X: f(0) = f(1)\}$ e $D_4 = \{f \in X: f(0) = f(1) = 0\}$.
+Dimostrare che:
+\begin{enumerate}
+    \item $\sigma(A_1) = \sigma_p(A_1) = \mathbb{C}$ e $\rho(A_1) = \emptyset$;
+    \item $\sigma(A_1) = \sigma_p(A_1) = \emptyset$ e $\rho(A_2) = \mathbb{C}$;
+    \item $\sigma(A_3) = \sigma_p(A_3) = 2\pi i \mathbb{Z}$;
+    \item $\sigma(A_4) = \mathbb{C}, \sigma_p(A_4) = \rho(A_4) = \emptyset.$
+\end{enumerate}
+
+\item Sia $u \in H^m(\mathbb{R}^n)$ con $2m \geq n$. Si usi la trasformata di Fourier per dimostrare che $u \in L^{\infty}(\mathbb{R}^n)$ e 
+\[
+||u||_{L^\infty} \leq C_{n, m}||u||_{H^m},
+\]
+dove $C_{n,m}$ non dipende da $u$.
+
+\item Siano $A$ un operatore autoaggiunto, $B_n = in(A+in)^{-1}$, $A_n = B_n A B_{-n}$ con $n \in \mathbb{Z}$. Dimostrare che
+\[
+U_n(t) = e^{iA_n t} = \sum_{k \geq 0} \frac{(-itA_n)^k}{k!}
+\]
+è un gruppo unitario fortemente continuo.
+
+\item Sia $H_0 = -\Delta:H^2(\mathbb{R}^3) \to L^2(\mathbb{R}^3)$. Mostrare che per $\varphi \in L^2(\mathbb{R}^3)$, $k > 0$, vale che:
+\[
+((H_0 + k^2)^{-1}\varphi)(x) = \frac{1}{4\pi}\int_{\mathbb{R}^3} \frac{e^{-k|x-y|}}{|x-y|}\varphi(y)dy.
+\]Hint: usa la trasformata di Fourier e il teorema dei residui.
+
+\item Sia $B \in \mathcal{L}(H)$. Dimostrare che:
+\begin{enumerate}
+    \item Se $B \geq 0$ allora $||B|| = \sup_{||\varphi|| = 1}\langle \varphi, B\varphi \rangle$;
+    \item $||B^\star B|| = ||B||^2.$
+\end{enumerate}
+
+\item Sia \(V \in L^{\infty} + L^2\) a valori reali. Dimostrare che \(\forall \epsilon > 0\) \(\exists V_2 \in L^2(\mathbb{R}^d), \exists V_{\infty} \in L^{\infty}(\mathbb{R}^d)\) 
+tali che \(V = V_2 + V_{\infty}\) con \(||V_2||_2 < \epsilon\).
+
+\item Siano \(f, g \in L^2(\mathbb{R}^3)\), si dimostri che;
+\begin{enumerate}
+    \item \(W(f)\) è unitario e \(W^*(f) = W(f)^{-1} = W(-f)\);
+    \item \(W^*(f)a_xW(f) = a_x + f(x)\) e \(W^*(f)a_x^*W(f)= a_x^* + \overline{f}(x)\);
+    \item \(\langle W(f)\Omega, \mathcal{N}W(f)\Omega \rangle = ||f||_2^2\).
+\end{enumerate}
+Dove \(W(f) := e^{a^{*}(f)-a(f)}\) per \(f \in L^2(\mathbb{R}^3)\) e $a^{*}(f)$ e $a(f)$ sono gli operatori di creazione e annichilazione
+sullo spazio di Fock $\F$. 
+
+
+\item Dimostrare che se \(\gamma_{\psi}\) è la matrice di densitò ridotta a una particella, allora \(\Tr \gamma_{\psi} = \langle \psi, \mathcal{N}\psi\rangle \).
+\item Consideriamo l'evoluzione temporale di Stati Coerenti:
+\[
+\begin{cases}
+i\,\partial_t\, \psi_{N,t} = \HN\, \psi_{N,t} \\[2pt]
+\psi_{N,0} = W(\sqrt{N}\,\varphi)\,\Om,
+\end{cases}
+\qquad \varphi \in H^1(\mathbb{R}^3),\ \|\varphi\|_2 = 1.
+\]
+Definiamo
+\[
+U_N(t,s) = W^{*}(\sqrt{N}\,\varphi_t)\; e^{-i\HN(t-s)}\; W(\sqrt{N}\,\varphi_s),
+\]
+che soddisfa
+\[
+i\,\partial_t\, U_N(t,s) = \LN(t)\, U_N(t,s),
+\qquad U_N(s,s) = \mathbb{1},
+\]
+con generatore
+\[
+\LN(t)
+= \Big( i\,\partial_t\, W^{*}(\sqrt{N}\,\varphi_t)\Big) W(\sqrt{N}\,\varphi_t)
++ W^{*}(\sqrt{N}\,\varphi_t)\, \HN\, W(\sqrt{N}\,\varphi_t).
+\]
+Dimostrare che il generatore $\LN(t)$ si scrive esplicitamente come
+\begin{align*}
+\LN(t) &= \HN
++ \int dx \,\big(V * |\varphi_t|^2\big)(x)\, \adag{x}\, \an{x} \\
+&\quad + \int dx\,dy\; V(x-y)\, \overline{\varphi_t(x)}\, \varphi_t(y)\, \adag{y}\, \an{x} \\
+&\quad + \frac{1}{2} \int dx\,dy\; V(x-y)
+   \Big( \varphi_t(x)\, \varphi_t(y)\, \adag{x}\, \adag{y}
+   + \overline{\varphi_t(x)}\, \overline{\varphi_t(y)}\, \an{x}\, \an{y} \Big) \\
+&\quad + \frac{1}{\sqrt{N}} \int dx\,dy\; V(x-y)\, \adag{x}
+   \big( \varphi_t(y)\, \adag{y} + \overline{\varphi_t(y)}\, \an{y} \big)\, \an{x}.
+\end{align*}
+\item 
+\begin{enumerate}
+\item \(A\) è un proiettore di rango \(1\), allora \(||A||_{\mathcal{I}_1} = 2||A||_{\mathcal{I}_2}\).
+\item Usare il punto precedente per dimostrare che:
+\[
+\Tr\big| \gamma_{N,t} - |\varphi_t\rangle \langle\varphi_t| \big| = 2\,\big\| \gamma_{N,t} - |\varphi_t\rangle \langle\varphi_t| \big\|_{\mathcal{I}_2},
+\]
+dove \(\gamma_{N, t}\) è la matrice densità ridotta associata allo stato \(\psi_{N,t}\) definito nell'esercizio precedente.
+\end{enumerate}
+\end{enumerate}
+\end{document}
